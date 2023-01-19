@@ -9,4 +9,7 @@ public class Cat extends Animal {
         System.out.println("Кошка бежит");
     }
 
+    public Cat() {
+        messageType = MessageType.SMILE;
+    }
 }

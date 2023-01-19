@@ -9,4 +9,8 @@ public class Dog extends Animal implements Test { // В отличие от exte
     public void jump() {
         System.out.println("Прыгает");
     }
+
+    public Dog() {
+        messageType = MessageType.MESSAGE;
+    }
 }
