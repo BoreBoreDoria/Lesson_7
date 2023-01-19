@@ -1,6 +1,7 @@
-public class Dog implements Animal, Test { // В отличие от extends, интерфейсы можно длетаь более 1
+public class Dog extends Animal implements Test { // В отличие от extends, интерфейсы можно длетаь более 1
+
     @Override
-    public void say() {
+    public void abstractSay() {
         System.out.println("Гав");
         System.out.println(info);
     }

@@ -1,7 +1,7 @@
-public class Cat implements Animal {
+public class Cat extends Animal {
 
     @Override
-    public void say() {
+    public void abstractSay() {
         System.out.println("Мяу");
     }
 

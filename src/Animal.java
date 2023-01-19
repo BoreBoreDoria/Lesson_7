@@ -1,14 +1,14 @@
-public interface Animal {
-    String info = "INFO";// Все параметры всегда static final
+public abstract class Animal {
+    protected String info = "INFO";
 
-    void say(); // Этот метод обязаны релаизовать все наслденики
+    abstract void abstractSay(); // Этот метод обязаны релаизовать все наслденики
 
     static void staticSay() {
-        System.out.println("Статик привет");// Не запрещено создавать статические методы
-        System.out.println(info);
+        System.out.println("Статик привет");
     }
 
-    default void defaultSay() {
-        System.out.println("Привет"); // Либо прописывать каку-то логику по-умолчанию с >Java 8
+    void say() {
+        System.out.println("Привет");
+        System.out.println(info);
     }
 }
