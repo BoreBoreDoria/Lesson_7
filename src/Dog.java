@@ -5,6 +5,6 @@ public class Dog extends Animal {
     }
 
     public void jump() {
-        System.out.println("Бегает");
+        System.out.println("Прыгает");
     }
 }

@@ -1,20 +1,26 @@
 public class Main {
     public static void main(String[] args) {
+        test(new Cat());
+        System.out.println();
+        test(new Dog());
+        test(new Animal());
+    }
 
-        Animal animal = new Cat(); // Восходящим преобразованием.
-        Cat cat = (Cat) animal;// Нисходящее преобразование
-        animal.say(); // Используем переменную типа родиельского класса, а внутри находится объект дочернего класса
-        cat.run();// После нисходящего преобразвания, используем изначальный тип
 
-        //---------------------
-        Animal animal1 = new Dog();
-        if (animal1 instanceof Cat) {// instanceof это специальная конструкция, которая помогает определить
-            // является ли объект определённым классом. На выходе true ( если истина ) и false ( если ложь )
-            System.out.println("Это Кошка");
-            Cat cat1 = (Cat) animal1;
+    public static void test(Animal animal) {
+        System.out.println("Обзор животного");
+        System.out.println("Функция первая:");
+        animal.say();
+        if (animal instanceof Cat) {
+            Cat cat = (Cat) animal;
+            System.out.println("Функция вторая:");
+            cat.run();
+        } else if (animal instanceof Dog){
+            Dog dog = (Dog) animal;
+            System.out.println("Функция вторая:");
+            dog.jump();
         } else {
-            System.out.println("Это собака");
-            Dog dog = (Dog) animal1;
+            System.out.println("К нам пришло нечто и больше ничего");
         }
     }
 }
